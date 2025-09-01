@@ -1,0 +1,37 @@
+package Com.t9;
+class parametrized_constructor{
+    String Name;
+    String section;
+    int classRoomNo;
+    parametarized_constructor(){
+        System.out.println("Default Constructor"); // Default constructor with no parameters
+    }
+    parametrized_constructor(String Name){
+            System.out.println("Hello "+ Name); // One parameterized constructor
+    }
+    parametrized_constructor(String Name,String section){
+        System.out.println("Hello "+Name + " Welcome to "+section); // Two parameterized constructor
+        
+    }
+    parametrized_constructor(String Name,String section,int classRoomNo){
+        System.out.println("Hello "+Name +"Welcome to"+ section +  " Your Class Room No: "+classRoomNo); // Three parameterized constructor
+        
+    }
+}
+
+public class Parametrized{
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        parametrized_constructor con = new parametrized_constructor();  //no parameters
+        parametrized_constructor p1con = new parametrized_constructor("Akshaya");
+        parametrized_constructor p2con = new parametrized_constructor("Akshaya","CSE_E");//two parameters
+        parametrized_constructor p3con = new parametrized_constructor("Akshaya","CSE_E",202);//three parameters
+    }
+}
+
+OUTPUT:
+Default Constructor
+Hello Akshaya
+Hello Akshaya Welcome to CSE_E
+Hello Akshaya Welcome to CSE_E Your Class Room No: 202
