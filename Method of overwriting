@@ -1,0 +1,42 @@
+package Com.sample;
+
+ class RbiBank  {
+	public double getRateOfintrest() {
+		return 5.0;
+	}
+}
+
+ class SBI extends RbiBank{
+	 @Override
+	 public double getRateOfintrest() {
+		 return 6.5;
+	 }
+ }
+
+ class LIC extends RbiBank {
+	 @Override
+	 public double getRateOfintrest() {
+		 return 8.0;
+	 }
+ }
+
+public class Bank {
+
+	public static void main(String[] args) {
+	RbiBank rb= new RbiBank();
+	RbiBank rb1= new SBI(); // upcasting
+	SBI sb= new SBI();
+	LIC lc = new LIC();
+	System.out.println("RBI rate of intrest is"+ rb.getRateOfintrest());
+	System.out.println("SBI rate of intrest is"+ rb1.getRateOfintrest());
+	System.out.println("SBI rate of intrest is"+ sb.getRateOfintrest());
+	System.out.println("LIC rate of intrest is"+ lc.getRateOfintrest());
+
+	}
+}
+
+output:
+RBI rate of intrest is5.0
+SBI rate of intrest is6.5
+SBI rate of intrest is6.5
+LIC rate of intrest is8.0
