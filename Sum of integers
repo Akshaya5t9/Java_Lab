@@ -1,0 +1,42 @@
+package Com.Sample;
+
+import java.util.Scanner;
+
+public class Sum_integers {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number of numbers you enter :");
+		int n=sc.nextInt();
+		int [] ar1=new int[10];
+		System.out.println("enter the numbers :");
+		for(int i=0;i<n;i++) {
+			ar1[i]=sc.nextInt();
+		}
+
+		int oddsum=0;
+		int evensum=0;
+		for(int i=0;i<n;i++) {
+			if(ar1[i]%2==0) {
+				evensum+=ar1[i];
+			}
+			else {
+				oddsum+=ar1[i];
+			}
+		}
+		System.out.println("evensum :"+evensum+" odd sum :"+oddsum);
+	}
+}
+
+
+OUTPUT:
+enter number of numbers you enter :
+5
+enter the numbers :
+2
+3
+5
+7
+9
+evensum :2 odd sum :24
