@@ -1,0 +1,42 @@
+package Com.Sample;
+import java.util.Scanner;
+
+public class PalindromeCheck {
+
+    public static boolean isPalindrome1(String str) {
+        // Convert the string to lowercase to handle case-insensitivity
+        String cleanStr = str.toLowerCase();
+        
+        int left = 0;
+        int right = cleanStr.length() - 1;
+
+        while (left < right) {
+            // Compare characters from both ends
+            if (cleanStr.charAt(left) != cleanStr.charAt(right)) {
+                return false; // Not a palindrome
+            }
+            left++;
+            right--;
+        }
+        return true; // It is a palindrome
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string to check if it's a palindrome: ");
+        String inputString = scanner.nextLine();
+
+        if (isPalindrome1(inputString)) {
+            System.out.println("\"" + inputString + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + inputString + "\" is not a palindrome.");
+        }
+
+        scanner.close();
+    }
+}
+
+OUTPUT:
+Enter a string to check if it's a palindrome: hello
+"hello" is not a palindrome.
